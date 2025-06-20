@@ -1,0 +1,4 @@
+sklearn-surprise
+streamlit
+pandas
+numpy
