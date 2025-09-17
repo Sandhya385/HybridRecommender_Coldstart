@@ -1,10 +1,16 @@
-# HybridRecommender_Coldstart
-HybridRecommender System
+# Hybrid Recommender System (Cold Start Handling)
 
-A full-featured hybrid movie recommender system that combines Collaborative Filtering (SVD-based) and Content-Based Filtering (TF-IDF on genres). It includes handling of cold start problems for new users and items, hyperparameter tuning with GridSearchCV, evaluation metrics, and an interactive Streamlit web app.
+A **full-featured hybrid movie recommender system** that combines:  
+- **Collaborative Filtering (SVD-based)**  
+- **Content-Based Filtering (TF-IDF on genres)**  
 
-📁 Project Structure
+The system also addresses the **cold start problem** for new users and new items. It includes **hyperparameter tuning, evaluation metrics, and an interactive Streamlit web app** for deployment.  
 
+---
+
+## 📂 Project Structure  
+
+```bash
 ├── data/
 │   └── movies.csv
 ├── model/
@@ -16,29 +22,70 @@ A full-featured hybrid movie recommender system that combines Collaborative Filt
 ├── app.py                # Streamlit app
 ├── requirements.txt      # Dependencies
 └── README.md             # Project documentation
+```
 
-**Features**
+---
 
-**Collaborative Filtering** using SVD from surprise library
+## ✨ Features  
 
-**Content-Based Filtering** using TF-IDF vectorization of genres
+- **Collaborative Filtering**  
+  - Uses SVD from the `surprise` library  
 
-**Hybrid Model** that blends both approaches with a tunable parameter alpha
+- **Content-Based Filtering**  
+  - TF-IDF vectorization of movie genres  
 
-**Cold Start solutions:**
+- **Hybrid Model**  
+  - Blends both approaches with a tunable parameter `alpha`  
 
-Suggests most popular movies for new users
+- **Cold Start Solutions**  
+  - Recommends most popular movies for new users  
+  - Suggests similar movies based on genres for new items  
 
-Suggests similar movies based on genre for new items
+- **Model Evaluation**  
+  - RMSE for Collaborative Filtering  
+  - Approximate RMSE for Content-Based Filtering  
 
-**Model Evaluation:**
+- **Hyperparameter Tuning**  
+  - GridSearchCV for SVD parameters  
 
-RMSE for Collaborative Filtering
+- **Deployment**  
+  - Streamlit app for interactive recommendations  
 
-Approximate RMSE for Content-Based Filtering
+---
 
-**Hyperparameter Tuning** using GridSearchCV
+## 🚀 How to Run  
 
-**Deployment** using Streamlit
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/Sandhya385/HybridRecommender_Coldstart.git
+   cd HybridRecommender_Coldstart
+   ```
+
+2. Install dependencies:  
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the Streamlit app:  
+   ```bash
+   streamlit run app.py
+   ```
+
+---
+
+## 📊 Results  
+
+- Collaborative Filtering RMSE: *<add value>*  
+- Content-Based RMSE (approximate): *<add value>*  
+
+*(Optional: add a screenshot of your Streamlit app or sample recommendations here)*  
+
+---
+
+## 🔮 Future Improvements  
+
+- Add support for user ratings in cold start scenarios  
+- Integrate more metadata (actors, directors, tags) into content-based filtering  
+- Experiment with neural network-based recommenders  
 
 
